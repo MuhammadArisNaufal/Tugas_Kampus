@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goose House</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body style="font-family:'Poppins', sans-serif;">
+    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2%; background-color: #333; border-bottom: 1px solid #333; position: fixed; top: 0; left: 0; right: 0; z-index: 9999;">
+        <h1 style="color: #ebebeb;">Goose House | Pizza Delivery</h1>
+    </nav>
+
+    <h3 style="padding-top: 7rem; padding-left: 1rem; padding-right: 1rem;">Homemade pizza tastes five stars. every beautiful memory is written in every drop of sauce, make your pizza now, and we will send it within 1 hour.</h3>
+
+    <form action="http://blackgoosebistro.com/pizza.php" method="post" style="padding: 1rem;">
+        <fieldset>
+        <legend><h3>Your Information</h3></legend>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" name="customername"></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: text-top;">Address: </td>
+                <td><textarea name="address" cols="30" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>Telephone Number: </td>
+                <td><input type="number" name="telephone"></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+
+                <td>
+                    <input type="text" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Deliver Instruction: 
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        <textarea name="instructions" cols="30" rows="10"></textarea>
+        </fieldset>
+        
+        <h2>Design Your Pizza</h2>
+
+        <fieldset>
+            <legend><h3>Pizza Specs</h3></legend>
+            Crust (Choose One):
+            <br>
+            <br>
+            <input type="radio" name="crust" value="Classic White"> Classic White
+            <br>
+            <input type="radio" name="crust" value="Multigrain"> Multigrain
+            <br>
+            <input type="radio" name="crust" value="Cheese Stuffed"> Cheese Stuffed
+            <br>
+            <input type="radio" name="crust" value="Gluten Free"> Gluten Free
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend><h3>Toppings</h3></legend>
+            Choose as Many as You Want
+            <br>
+            <br>
+            <input type="checkbox" name="toppings[]" value="Red Sauce">Red Sauce
+            <br>
+            <input type="checkbox" name="toppings[]" value="White Sauce"> White Sauce
+            <br>
+            <input type="checkbox" name="toppings[]" value="Mozzarella Cheese">Mozzarella Cheese
+            <br>
+            <input type="checkbox" name="toppings[]" value="Pepperoni">Pepperoni
+            <br>
+            <input type="checkbox" name="toppings[]" value="Mushroom">Mushroom
+            <br>
+            <input type="checkbox" name="toppings[]" value="Peppers">Peppers
+            <br>
+            <input type="checkbox" name="toppings[]" value="Anchovies">Anchovies
+        </fieldset>
+        <br>
+
+        <label for="pizzas" style="font-size: 23px;"><b>How Manny Pizzas</b></label>
+        <select name="pizzas" id="pizzas">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit" style="border: none; color: white; padding: 14px 28px; cursor: pointer; background-color: #333;">Bring me the pizza</button>
+        <button type="reset" style="border: none; color: white; padding: 14px 28px; cursor: pointer; background-color: #333;">Reset</button>
+    </form>
+</body>
+</html>
