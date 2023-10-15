@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Tech</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body style="font-family:'Poppins', sans-serif;">
+    <nav style="display: flex; align-items: center; padding: 1px 2%; background-color: #333; border-bottom: 1px solid #333; position: fixed; top: 0; left: 0; right: 0; z-index: 9999;">
+    
+        <h1 style="color: #ebebeb; font-size: xx-large;"><i>Delta</i> <span style="color: goldenrod;"><u><i>Tech</i></u></span></h1>
+
+        <div class="navbar-nav" style="padding-left: 4%;">
+            <a href="#" style="color: white; display: inline-block; font-size: 1rem; margin: 0 1rem; text-decoration: none;">Home</a>
+            <a href="#Generate Link" style="color: white; display: inline-block; font-size: 1rem; margin: 0 1rem; text-decoration: none;">Generate Link</a>
+            <a href="#Transaction History" style="color: white; display: inline-block; font-size: 1rem; margin: 0 1rem; text-decoration: none;">Transaction History</a>
+            <a href="#Policy" style="color: white; display: inline-block; font-size: 1rem; margin: 0 1rem; text-decoration: none;">Policy</a>
+            <a href="#Logout" style="color: white; display: inline-block; font-size: 1rem; margin: 0 1rem; text-decoration: none;">Logout</a>
+        </div>
+    </nav>
+    <form action="hasilform.html" method="post" style="padding: 1rem;">
+        <table style="padding-top: 9%; padding-left: 2%;">
+            <tr>
+                <td><b>Product:</b></td>
+                <td style="padding-left: 20%;"><input type="text" name="Product" placeholder="  your product..." style="width: 20rem; height: 2rem;"></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;"><b>Description:</b></td>
+                <td style="padding-left: 20%;"><textarea type="text" name="Description" placeholder=" write here..." style="width: 20rem; height: 5rem;"></textarea></td>
+            </tr>
+            <tr>
+                <td><b>Account Number:</b></td>
+                <td style="padding-left: 20%;"><input type="number" name="Acount Number" min="1" placeholder="  your number..." style="width: 20rem; height: 2rem;"></td>
+            </tr>
+            <tr>
+                <td><b>Bank:</b></td>
+                <td style="padding-left: 20%;"><select name="Bank" >
+                    <option value="BCA">BCA</option>
+                    <option value="BNI">BNI</option>
+                    <option value="CMB">CMB</option>
+                    <option value="Mandiri">Mandiri</option>
+                    <option value="BTN">BTN</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><b>Account Holder:</b></td>
+                <td style="padding-left: 20%;"><input type="text" name="Account Holder" placeholder="  your name..." style="width: 20rem; height: 2rem;"></td>
+            </tr>
+            <tr>
+                <td><b>Transaction:</b></td>
+                <td style="padding-left: 20%;"><select name="Transaction">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <p style="font-size: 8px; width: 20rem;"><b>*if the transaction more than 1 please choose the number from list</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="padding-left: 20%;">
+                    <input type="checkbox" name="Phone Number"> Send to mobile phone?
+                    <br>
+                    <input type="checkbox" name="Email"> Send to email?
+                </td>
+            </tr>
+            <tr>
+                <td><b>Send to Mobile Phone</b></td>
+                <td style="padding-left: 20%;"><input type="number" name="Phone Number" placeholder="your number..." style="width: 20rem; height: 2rem;"></td>
+            </tr>
+            <tr>
+                <td><b>Send to Email</b></td>
+                <td style="padding-left: 20%;"><input type="text" name="Phone Number" placeholder=" your email..." style="width: 20rem; height: 2rem;"></td>
+            </tr>
+            <tr>
+                <td><button type="submit" style="border: none; color: white; padding: 14px 28px; cursor: pointer; background-color: #333;">Submit</button>
+                <button type="reset" style="border: none; color: white; padding: 14px 28px; cursor: pointer; background-color: #333;">Reset</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
