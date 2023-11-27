@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB ARIS UTSFORM12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;1,700&display=swap" rel="stylesheet">
+        
+        <style>
+            body {
+                font-family:'Poppins', sans-serif;
+            }
+        
+            .form {
+                display: flex;
+                justify-content: center;
+            }
+        
+            .form td {
+                padding: 0 2rem 0 0;
+            }
+        
+            h3 {
+                margin-top: 3rem;
+                text-align: center;
+            }
+        
+            .nim, .nama, .nopol, .merk{
+                width: 10rem;
+                height: 1.5rem;
+                margin-block: 3px;
+            }
+            
+            .pencetan {
+                display: flex;
+                justify-content: center;
+            }
+        
+            .tombol {
+                background-color: blue;
+                border: none;
+                color: white;
+                padding-block: 0.5rem;
+                padding-inline: 2rem;
+                margin: 1rem 1rem;
+                border-radius: 3px;
+            }
+            
+            .reset {
+                background-color: red;
+                border: none;
+                color: white;
+                padding-block: 0.5rem;
+                padding-inline: 2rem;
+                margin: 1rem 1rem;
+                border-radius: 3px;
+            }
+        
+            select {
+                width: 10rem;
+                height: 1.5rem;
+                margin-block: 3px;
+            }
+        
+        </style>
+</head>
+
+<body>
+    <h3>REGISTRASI KENDARAAN ANDA</h3>
+    <div class="form">
+        <fieldset>
+        <table>
+            <tr>
+                <td>Status: </td>
+                <td>
+                    <input type="radio" class="mahasiswa"> Mahasiswa
+                    <input type="radio" class="dosen"> Dosen
+                </td>
+            </tr>
+            <tr>
+                <td>NIM/NIDN: </td>
+                <td><input type="number" class="nim"></td>
+            </tr>
+            <tr>
+                <td>Nama Lengkap: </td>
+                <td><input type="text" class="nama"></td>
+            </tr>
+            <tr>
+                <td>Prodi: </td>
+                <td>
+                    <select>
+                        <option value="pilihprodi">Pilih Prodi</option>
+                        <option value="teknikinformatika">Teknik Informatika</option>
+                        <option value="sisteminformasi">Sistem Informasi</option>
+                        <option value="bisnisdigital">Bisnis Digital</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Jenis Kendaraan: </td>
+
+                <td>
+                    <input type="radio" class="motor"> Motor
+                    <input type="radio" class="mobil"> Mobil
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    NoPol: 
+                </td>
+                <td><input type="text" class="nopol"></td>
+            </tr>
+            <tr>
+                <td>Merk</td>
+                <td><input type="text" class="merk"></td>
+            </tr>
+            <tr>
+                <td>Upload STNK</td>
+                <td><input type="file"></td>
+            </tr>
+        </table>
+        <br>
+        <div class="pencetan">
+            <input type="button" class="tombol" value="Daftar">
+            <input type="reset" class="reset" value="Reset">
+        </div>
+    </fieldset>
+    </div>
+</body>
+</html>
