@@ -1,53 +1,60 @@
-<?php
+<?php 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nama = $_POST['nama'];
-    $nilai = $_POST['nilai'];
+class RankedGame {
+    public $nama;
+    public $rank1;
+    public $rank2;
+    public $rank3;
+    public $rank4;
+    public $rank5;
 
-    include 'mahasiswa.php';
+    public function __construct($nama, $rank1, $rank2, $rank3, $rank4, $rank5) {
+        $this->nama = $nama;
+        $this->rank1 = $rank1;
+        $this->rank2 = $rank2;
+        $this->rank3 = $rank3;
+        $this->rank4 = $rank4;
+        $this->rank5 = $rank5;
+    }
 
-    $mahasiswa = new Mahasiswa($nama, $nilai);
-    $hasilLulus = $mahasiswa->hasilLulus();
-    $hasilNilai = $mahasiswa->predikat();
+    public function getAnswer1() {
+        return $this->rank1 >= 'tetris' ? 20 : 0;
+    }
+    public function getAnswer2() {
+        return $this->rank1 >= 'minecraft' ? 20 : 0;
+    }
+    public function getAnswer3() {
+        return $this->rank1 >= 'gta5' ? 20 : 0;
+    }
+    public function getAnswer4() {
+        return $this->rank1 >= 'wiisports' ? 20 : 0;
+    }
+    public function getAnswer5() {
+        return $this->rank1 >= 'pubg' ? 20 : 0;
+    }
+  
+    public function getTotalScore() {
+        return $this->getAnswer1() + $this->getAnswer2() + $this->getAnswer3() + $this->getAnswer4() + $this->getAnswer5();
+    }
+    
+    public function getAnswerFeed1() {
+        return $this->rank1 >= 'tetris' ? "<span class='text-success'>correct</span>" : "<span class='text-danger'>wrong</span>";
+    }
+    public function getAnswerFeed2() {
+        return $this->rank1 >= 'minecraft' ? "<span class='text-success'>correct</span>" : "<span class='text-danger'>wrong</span>";
+    }
+    public function getAnswerFeed3() {
+        return $this->rank1 >= 'gta5' ? "<span class='text-success'>correct</span>" : "<span class='text-danger'>wrong</span>";
+    }
+    public function getAnswerFeed4() {
+        return $this->rank1 >= 'wiisports' ? "<span class='text-success'>correct</span>" : "<span class='text-danger'>wrong</span>";
+    }
+    public function getAnswerFeed5() {
+        return $this->rank1 >= 'pubg' ? "<span class='text-success'>correct</span>" : "<span class='text-danger'>wrong</span>";
+    }
+
+
 
 }
 
 ?>
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
- 
-
-    <table class="table mt-5">
-  <thead>
-    <tr>
-      <th scope="col">NO</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Nilai</th>
-      <th scope="col">Hasil</th>
-      <th scope="col">Predikat</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td><?= $nama ?></td>
-      <td><?= $nilai ?></td>
-      <td><?= $hasilLulus ?></td>
-      <td><?= $hasilNilai ?></td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-</html>
